@@ -1,5 +1,6 @@
 package com.example.challenge4
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
@@ -13,15 +14,15 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
     private var binding: ActivityMainBinding? = null
     var timer: Timer? = null
-    lateinit var count: IntArray
-    var backCount = 0
-    var id1 = 0
-    var id2 = 0
-    var score = 0
-    var frontCount = 0
-    var copyIds: MutableList<Int>? = null
-    var matched: MutableList<Int>? = null
-    var builder: AlertDialog.Builder? = null
+    private lateinit var count: IntArray
+    private var backCount = 0
+    private var id1 = 0
+    private var id2 = 0
+    private var score = 0
+    private var frontCount = 0
+    private var copyIds: MutableList<Int>? = null
+    private var matched: MutableList<Int>? = null
+    private var builder: AlertDialog.Builder? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         //mainT = new Timer (10,this);
         //mainT.();
         binding = ActivityMainBinding.inflate(layoutInflater)
-        val view: View = binding!!.getRoot()
+        val view: View = binding!!.root
         setContentView(view)
         count = IntArray(8)
         backCount = 0
@@ -61,17 +62,18 @@ class MainActivity : AppCompatActivity() {
         cardOnClick(binding!!.card16View)
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     fun cardOnClick(view: ImageView) {
         val drawableIDs = arrayOf(R.drawable.amazed, R.drawable.crying, R.drawable.hearteyes, R.drawable.heartface, R.drawable.laughing, R.drawable.ok, R.drawable.sad, R.drawable.thinking)
         val context: Context = this
         //int id = drawableIDs[new Random().nextInt(8)];
         val id = copyIds!![Random().nextInt(copyIds!!.size)]
-        Log.v("This is id: ", Integer.toString(id))
+        Log.v("This is id: ", id.toString())
         val index = Arrays.asList(*drawableIDs).indexOf(id)
-        Log.v("This is drawableIDs: ", Arrays.toString(drawableIDs))
-        Log.v("This is index: ", Integer.toString(index))
+        Log.v("This is drawableIDs: ", drawableIDs.contentToString())
+        Log.v("This is index: ", index.toString())
         count[index]++
-        Log.v("This is count: ", Integer.toString(count[index]))
+        Log.v("This is count: ", count[index].toString())
         if (count[index] == 2) {
             copyIds!!.remove(id)
         }
@@ -86,20 +88,20 @@ class MainActivity : AppCompatActivity() {
                 if (backCount < 2) {
                     if (backCount == 0) { //backCount = 0
                         id1 = id
-                        Log.v("This is id1: ", Integer.toString(id1))
+                        Log.v("This is id1: ", id1.toString())
                         //Log.v("This is backCount: ", Integer.toString(backCount));
                     } else { //backCount = 1
                         id2 = id
-                        Log.v("This is id2: ", Integer.toString(id2))
+                        Log.v("This is id2: ", id2.toString())
                         //Log.v("This is backCount: ", Integer.toString(backCount));
                     }
                     view.setImageDrawable(drawable)
                     backCount++
-                    Log.v("This is backCount: ", Integer.toString(backCount))
+                    Log.v("This is backCount: ", backCount.toString())
                 }
                 if (backCount == 2) {
                     if (id1 == id2) {
-                        Log.v("This is score: ", Integer.toString(score))
+                        Log.v("This is score: ", score.toString())
                         score++
                         frontCount += 2
                         if (frontCount != 16) {
@@ -126,7 +128,7 @@ class MainActivity : AppCompatActivity() {
             }
             if (frontCount == 16) {
                 alertView("Your Score: $score")
-                Log.v("This is frontCount: ", Integer.toString(frontCount))
+                Log.v("This is frontCount: ", frontCount.toString())
             }
         }
     }
