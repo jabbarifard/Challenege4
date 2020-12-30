@@ -6,13 +6,203 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+
+    <ImageView
+        android:id="@+id/card1View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/card5View"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card2View"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card2View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/card6View"
+        app:layout_constraintStart_toEndOf="@+id/card1View"
+        app:layout_constraintEnd_toStartOf="@+id/card3View"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card3View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/card7View"
+        app:layout_constraintStart_toEndOf="@+id/card2View"
+        app:layout_constraintEnd_toStartOf="@+id/card4View"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card4View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/card8View"
+        app:layout_constraintStart_toEndOf="@+id/card3View"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card5View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card1View"
+        app:layout_constraintBottom_toTopOf="@+id/card9View"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card6View"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card6View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card2View"
+        app:layout_constraintBottom_toTopOf="@+id/card10View"
+        app:layout_constraintStart_toEndOf="@+id/card5View"
+        app:layout_constraintEnd_toStartOf="@+id/card7View"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card7View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card3View"
+        app:layout_constraintBottom_toTopOf="@+id/card11View"
+        app:layout_constraintStart_toEndOf="@+id/card6View"
+        app:layout_constraintEnd_toStartOf="@+id/card8View"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card8View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card4View"
+        app:layout_constraintBottom_toTopOf="@+id/card12View"
+        app:layout_constraintStart_toEndOf="@+id/card7View"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card9View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card5View"
+        app:layout_constraintBottom_toTopOf="@+id/card13View"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card10View"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card10View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card6View"
+        app:layout_constraintBottom_toTopOf="@+id/card14View"
+        app:layout_constraintStart_toEndOf="@+id/card9View"
+        app:layout_constraintEnd_toStartOf="@+id/card11View"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card11View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card7View"
+        app:layout_constraintBottom_toTopOf="@+id/card15View"
+        app:layout_constraintStart_toEndOf="@+id/card10View"
+        app:layout_constraintEnd_toStartOf="@+id/card12View"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card12View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card8View"
+        app:layout_constraintBottom_toTopOf="@+id/card16View"
+        app:layout_constraintStart_toEndOf="@+id/card11View"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <ImageView
+        android:id="@+id/card13View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card9View"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/card14View"
+        android:layout_marginBottom="8dp"/>
+
+    <ImageView
+        android:id="@+id/card14View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card10View"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card13View"
+        app:layout_constraintEnd_toStartOf="@+id/card15View"
+        android:layout_marginBottom="8dp"/>
+    <ImageView
+        android:id="@+id/card15View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card11View"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card14View"
+        app:layout_constraintEnd_toStartOf="@+id/card16View"
+        android:layout_marginBottom="8dp"/>
+
+    <ImageView
+        android:id="@+id/card16View"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/emojipattern"
+        app:layout_constraintTop_toBottomOf="@+id/card12View"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card15View"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:onClick="resetOnClick"
+        app:layout_constraintTop_toBottomOf="@+id/card14View"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
